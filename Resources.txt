@@ -2,3 +2,16 @@ Resources:
 
 Art:
 - Knight - https://itch.io/queue/c/288022/firstrpg-for-chicktech?game_id=108648
+- Item - https://alexs-assets.itch.io/16x16-rpg-item-pack
+- GothicVania Bridge - https://ansimuz.itch.io/gothicvania-bridge-art-pack
+- Gothicvania Town - https://ansimuz.itch.io/gothicvania-town
+- Bubble Emotions - https://kicked-in-teeth.itch.io/emoticons
+- Trees - https://ansimuz.itch.io/trees-bushes-sprites
+- Food - https://henrysoftware.itch.io/pixel-food
+- SunnyLand Forest - https://ansimuz.itch.io/sunnyland-forest
+- Horizontal Backgrounds - https://free-game-assets.itch.io/free-horizontal-game-backgrounds
+- Skeleton - https://jesse-m.itch.io/skeleton-pack
+- Rogue - https://lionheart963.itch.io/rogue-like-character
+- Bandit - https://lionheart963.itch.io/axe-bandit
+- Blob Minion - https://lionheart963.itch.io/blob-minion
+- blob sprite - https://lionheart963.itch.io/blob-sprite
