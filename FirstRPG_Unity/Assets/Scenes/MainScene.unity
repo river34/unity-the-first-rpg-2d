@@ -3191,6 +3191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0af8452261e81d34c9742cae11599619, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MaxNumQuests: 2
   QuestHUDPrefab: {fileID: 114153496678582586, guid: e69ca04e35030c5438cf8d947b63d51d,
     type: 2}
   Holder: {fileID: 1361387108}

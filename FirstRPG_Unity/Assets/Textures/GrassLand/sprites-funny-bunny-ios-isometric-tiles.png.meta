@@ -1,0 +1,1275 @@
+fileFormatVersion: 2
+guid: daa6565c626c87e4290727d56d26e167
+timeCreated: 1520292223
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: sprites-funny-bunny-ios-isometric-tiles_0
+    21300002: sprites-funny-bunny-ios-isometric-tiles_1
+    21300004: sprites-funny-bunny-ios-isometric-tiles_2
+    21300006: sprites-funny-bunny-ios-isometric-tiles_3
+    21300008: sprites-funny-bunny-ios-isometric-tiles_4
+    21300010: sprites-funny-bunny-ios-isometric-tiles_5
+    21300012: sprites-funny-bunny-ios-isometric-tiles_6
+    21300014: sprites-funny-bunny-ios-isometric-tiles_7
+    21300016: sprites-funny-bunny-ios-isometric-tiles_13
+    21300018: sprites-funny-bunny-ios-isometric-tiles_14
+    21300020: sprites-funny-bunny-ios-isometric-tiles_15
+    21300022: sprites-funny-bunny-ios-isometric-tiles_16
+    21300024: sprites-funny-bunny-ios-isometric-tiles_19
+    21300026: sprites-funny-bunny-ios-isometric-tiles_20
+    21300028: sprites-funny-bunny-ios-isometric-tiles_21
+    21300030: sprites-funny-bunny-ios-isometric-tiles_22
+    21300032: sprites-funny-bunny-ios-isometric-tiles_24
+    21300034: sprites-funny-bunny-ios-isometric-tiles_31
+    21300036: sprites-funny-bunny-ios-isometric-tiles_32
+    21300038: sprites-funny-bunny-ios-isometric-tiles_36
+    21300040: sprites-funny-bunny-ios-isometric-tiles_39
+    21300042: sprites-funny-bunny-ios-isometric-tiles_40
+    21300044: sprites-funny-bunny-ios-isometric-tiles_42
+    21300046: sprites-funny-bunny-ios-isometric-tiles_43
+    21300048: sprites-funny-bunny-ios-isometric-tiles_44
+    21300050: sprites-funny-bunny-ios-isometric-tiles_45
+    21300052: sprites-funny-bunny-ios-isometric-tiles_47
+    21300054: sprites-funny-bunny-ios-isometric-tiles_48
+    21300056: sprites-funny-bunny-ios-isometric-tiles_49
+    21300058: sprites-funny-bunny-ios-isometric-tiles_50
+    21300060: sprites-funny-bunny-ios-isometric-tiles_51
+    21300062: sprites-funny-bunny-ios-isometric-tiles_52
+    21300064: sprites-funny-bunny-ios-isometric-tiles_53
+    21300066: sprites-funny-bunny-ios-isometric-tiles_54
+    21300068: sprites-funny-bunny-ios-isometric-tiles_55
+    21300070: sprites-funny-bunny-ios-isometric-tiles_56
+    21300072: sprites-funny-bunny-ios-isometric-tiles_57
+    21300074: sprites-funny-bunny-ios-isometric-tiles_58
+    21300076: sprites-funny-bunny-ios-isometric-tiles_59
+    21300078: sprites-funny-bunny-ios-isometric-tiles_60
+    21300080: sprites-funny-bunny-ios-isometric-tiles_61
+    21300082: sprites-funny-bunny-ios-isometric-tiles_62
+    21300084: sprites-funny-bunny-ios-isometric-tiles_63
+    21300086: sprites-funny-bunny-ios-isometric-tiles_64
+    21300088: sprites-funny-bunny-ios-isometric-tiles_65
+    21300090: sprites-funny-bunny-ios-isometric-tiles_66
+    21300092: sprites-funny-bunny-ios-isometric-tiles_67
+    21300094: sprites-funny-bunny-ios-isometric-tiles_68
+    21300096: sprites-funny-bunny-ios-isometric-tiles_69
+    21300098: sprites-funny-bunny-ios-isometric-tiles_70
+    21300100: sprites-funny-bunny-ios-isometric-tiles_71
+    21300102: sprites-funny-bunny-ios-isometric-tiles_72
+    21300104: sprites-funny-bunny-ios-isometric-tiles_73
+    21300106: sprites-funny-bunny-ios-isometric-tiles_74
+    21300108: sprites-funny-bunny-ios-isometric-tiles_75
+    21300110: sprites-funny-bunny-ios-isometric-tiles_76
+    21300112: sprites-funny-bunny-ios-isometric-tiles_77
+    21300114: sprites-funny-bunny-ios-isometric-tiles_78
+    21300116: sprites-funny-bunny-ios-isometric-tiles_79
+    21300118: sprites-funny-bunny-ios-isometric-tiles_80
+    21300120: sprites-funny-bunny-ios-isometric-tiles_81
+    21300122: sprites-funny-bunny-ios-isometric-tiles_82
+    21300124: sprites-funny-bunny-ios-isometric-tiles_83
+    21300126: sprites-funny-bunny-ios-isometric-tiles_84
+    21300128: sprites-funny-bunny-ios-isometric-tiles_85
+    21300130: sprites-funny-bunny-ios-isometric-tiles_86
+    21300132: sprites-funny-bunny-ios-isometric-tiles_87
+    21300134: sprites-funny-bunny-ios-isometric-tiles_88
+    21300136: sprites-funny-bunny-ios-isometric-tiles_89
+    21300138: sprites-funny-bunny-ios-isometric-tiles_90
+    21300140: sprites-funny-bunny-ios-isometric-tiles_91
+    21300142: sprites-funny-bunny-ios-isometric-tiles_92
+    21300144: sprites-funny-bunny-ios-isometric-tiles_93
+    21300146: sprites-funny-bunny-ios-isometric-tiles_94
+    21300148: sprites-funny-bunny-ios-isometric-tiles_95
+    21300150: sprites-funny-bunny-ios-isometric-tiles_96
+    21300152: sprites-funny-bunny-ios-isometric-tiles_97
+    21300154: sprites-funny-bunny-ios-isometric-tiles_98
+    21300156: sprites-funny-bunny-ios-isometric-tiles_8
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_0
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 456
+        width: 141
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_1
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 489
+        width: 118
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_2
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 632
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_3
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 450
+        width: 134
+        height: 182
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_4
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 628
+        width: 7
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_5
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 484
+        width: 126
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_6
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 588
+        width: 68
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_7
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 588
+        width: 48
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_13
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 572
+        width: 55
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_14
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 600
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_15
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 572
+        width: 40
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_16
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 598
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_19
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 548
+        width: 39
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_20
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 540
+        width: 43
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_21
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 568
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_22
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 540
+        width: 42
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_24
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 548
+        width: 30
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_31
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 500
+        width: 49
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_32
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 516
+        width: 53
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_36
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 495
+        width: 51
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_39
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 476
+        width: 79
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_40
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 482
+        width: 41
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_42
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 472
+        width: 32
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_43
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 412
+        width: 73
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_44
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 350
+        width: 84
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_45
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 346
+        width: 92
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_47
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 450
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_48
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 412
+        width: 72
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_49
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 418
+        width: 79
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_50
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 428
+        width: 64
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_51
+      rect:
+        serializedVersion: 2
+        x: 766
+        y: 432
+        width: 34
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_52
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 428
+        width: 56
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_53
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 298
+        width: 96
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_54
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 297
+        width: 84
+        height: 153
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_55
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 366
+        width: 73
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_56
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 364
+        width: 64
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_57
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 380
+        width: 62
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_58
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 388
+        width: 51
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_59
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 390
+        width: 46
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_60
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 300
+        width: 68
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_61
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 300
+        width: 80
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_62
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 346
+        width: 4
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_63
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 316
+        width: 69
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_64
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 296
+        width: 67
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_65
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 309
+        width: 64
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_66
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 132
+        width: 160
+        height: 170
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_67
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 268
+        width: 74
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_68
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 246
+        width: 40
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_69
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 196
+        width: 137
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_70
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 242
+        width: 65
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_71
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 296
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_72
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 251
+        width: 64
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_73
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 252
+        width: 69
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_74
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 252
+        width: 66
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_75
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 172
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_76
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 177
+        width: 87
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_77
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 181
+        width: 86
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_78
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 181
+        width: 78
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_79
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 232
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 210
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_81
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 181
+        width: 84
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_82
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 182
+        width: 78
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_83
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 176
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_84
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 2
+        width: 115
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_85
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 108
+        width: 87
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_86
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 108
+        width: 91
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_87
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 116
+        width: 90
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_88
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 72
+        width: 93
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_89
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 113
+        width: 82
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_90
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 112
+        width: 79
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_91
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 112
+        width: 81
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_92
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 12
+        width: 93
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_93
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 85
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_94
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 20
+        width: 122
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_95
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 104
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_96
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 8
+        width: 128
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_97
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 20
+        width: 83
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_98
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 18
+        width: 78
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: sprites-funny-bunny-ios-isometric-tiles_8
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 356
+        width: 69
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -21,16 +21,18 @@ public class Character : MonoBehaviour
 
     protected Animator anim;
     protected enum MoveDirection { Up, Down, Left, Right };
+    protected bool canMove;
 
     private bool isWalking, isWalkingLast;
     private bool isLeft, isLeftLast;
-    private bool canMove;
     private Vector3 localScale;
     private RPGEventTrigger EventTrigger;
     private static int count;
     private bool inRangeOfPlayer;
     private Character player;
     private int id;
+    private bool usePhysics;
+    private int layerMask;
 
     private void Awake()
     {
@@ -95,6 +97,8 @@ public class Character : MonoBehaviour
         SetCanMove(true);
 
         InDialogue.OnUpdated += OnInDialogueUpdated;
+
+        layerMask = 1 << (LayerMask.NameToLayer("Map"));
     }
 
     protected virtual void Update()
@@ -157,26 +161,46 @@ public class Character : MonoBehaviour
     {
         if (canMove == false) return;
 
+        Vector3 nextPosition = transform.position;
+
         switch (direction)
         {
             case MoveDirection.Up:
-                transform.position += Vector3.up * MoveSpeed * Time.deltaTime;
-                isWalking = true;
+                nextPosition += Vector3.up * MoveSpeed * Time.deltaTime;
                 break;
             case MoveDirection.Down:
-                transform.position += Vector3.down * MoveSpeed * Time.deltaTime;
-                isWalking = true;
+                nextPosition += Vector3.down * MoveSpeed * Time.deltaTime;
                 break;
             case MoveDirection.Left:
-                transform.position += Vector3.left * MoveSpeed * Time.deltaTime;
-                isWalking = true;
+                nextPosition += Vector3.left * MoveSpeed * Time.deltaTime;
                 isLeft = true;
                 break;
             case MoveDirection.Right:
-                transform.position += Vector3.right * MoveSpeed * Time.deltaTime;
-                isWalking = true;
+                nextPosition += Vector3.right * MoveSpeed * Time.deltaTime;
                 isLeft = false;
                 break;
+        }
+
+        if (Vector3.Distance(nextPosition, transform.position) > float.Epsilon)
+        {
+            if (usePhysics == true)
+            {
+                if (Physics2D.Raycast(transform.position, nextPosition - transform.position, MoveSpeed * Time.deltaTime, layerMask))
+                {
+                    // do nothing
+                    isWalking = false;
+                }
+                else
+                {
+                    isWalking = true;
+                    transform.position = nextPosition;
+                }
+            }
+            else
+            {
+                isWalking = true;
+                transform.position = nextPosition;
+            }
         }
     }
 
@@ -302,5 +326,10 @@ public class Character : MonoBehaviour
             EventTrigger.OnRPGEventClosed -= OnRPGEventClosedHandler;
             EventTrigger.OnRPGEventClosed += OnRPGEventClosedHandler;
         }
+    }
+    
+    public void SetPhysics(bool usePhysics)
+    {
+        this.usePhysics = usePhysics;
     }
 }

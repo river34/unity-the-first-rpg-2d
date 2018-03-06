@@ -10,6 +10,8 @@ public class Player : Character
 
     public FloatObject PlayerSpeed;
 
+    private Level.LevelControl control;
+
     protected override void Start()
     {
         if (Instance == null)
@@ -34,34 +36,94 @@ public class Player : Character
         CheckInput();
     }
 
+    public void SetControl(Level.LevelControl control)
+    {
+        this.control = control;
+    }
+
+    //public void SetPhysics(bool usePhysics)
+    //{
+    //    if (usePhysics == true)
+    //    {
+    //        Rigidbody2D rigid = GetComponent<Rigidbody2D>();
+    //        if (rigid != null)
+    //        {
+    //            rigid.bodyType = RigidbodyType2D.Dynamic;
+    //        }
+    //    }
+    //    else
+    //    {
+    //        Rigidbody2D rigid = GetComponent<Rigidbody2D>();
+    //        if (rigid != null)
+    //        {
+    //            rigid.bodyType = RigidbodyType2D.Kinematic;
+    //        }
+    //    }
+    //}
+
     void CheckInput()
     {
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+        if (control == Level.LevelControl.TwoDirections)
         {
-            Move(MoveDirection.Left);
-            PlayerMoving.Value = true;
-            PlayerSpeed.Value = -1 * MoveSpeed;
+            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+            {
+                Move(MoveDirection.Left);
+                if (canMove == true)
+                {
+                    PlayerMoving.Value = true;
+                    PlayerSpeed.Value = -1 * MoveSpeed;
+                }
+            }
+            else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+            {
+                Move(MoveDirection.Right);
+                if (canMove == true)
+                {
+                    PlayerMoving.Value = true;
+                    PlayerSpeed.Value = MoveSpeed;
+                }
+            }
+            else
+            {
+                PlayerMoving.Value = false;
+                PlayerSpeed.Value = 0;
+            }
         }
-        else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+        else if (control == Level.LevelControl.FourDirections)
         {
-            Move(MoveDirection.Right);
-            PlayerMoving.Value = true;
-            PlayerSpeed.Value = MoveSpeed;
-        }
-        //else if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
-        //{
-        //    Move(MoveDirection.Up);
-        //    PlayerMoving.Value = true;
-        //}
-        //else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
-        //{
-        //    Move(MoveDirection.Down);
-        //    PlayerMoving.Value = true;
-        //}
-        else
-        {
-            PlayerMoving.Value = false;
-            PlayerSpeed.Value = 0;
+            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+            {
+                Move(MoveDirection.Left);
+                if (canMove == true)
+                {
+                    PlayerMoving.Value = true;
+                    PlayerSpeed.Value = -1 * MoveSpeed;
+                }
+            }
+            else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+            {
+                Move(MoveDirection.Right);
+                if (canMove == true)
+                {
+                    PlayerMoving.Value = true;
+                    PlayerSpeed.Value = MoveSpeed;
+                }
+            }
+            else if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+            {
+                Move(MoveDirection.Up);
+                PlayerMoving.Value = true;
+            }
+            else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+            {
+                Move(MoveDirection.Down);
+                PlayerMoving.Value = true;
+            }
+            else
+            {
+                PlayerMoving.Value = false;
+                PlayerSpeed.Value = 0;
+            }
         }
     }
 }
