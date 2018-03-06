@@ -65,4 +65,9 @@ public class Item : MonoBehaviour
             player = null;
         }
     }
+
+    public void Reset()
+    {
+        gameObject.SetActive(true);
+    }
 }
