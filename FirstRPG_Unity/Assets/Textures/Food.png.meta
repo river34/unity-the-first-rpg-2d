@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 9eb883820ba385a47810f2a89fe57188
-timeCreated: 1520053044
+timeCreated: 1521074568
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -53,7 +53,7 @@ TextureImporter:
     21300092: Food_46
     21300094: Food_47
     21300096: watermellon
-    21300098: Food_49
+    21300098: Coin
     21300100: chicken_leg
     21300102: cherry
     21300104: Food_52
@@ -825,7 +825,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Food_49
+      name: Coin
       rect:
         serializedVersion: 2
         x: 16

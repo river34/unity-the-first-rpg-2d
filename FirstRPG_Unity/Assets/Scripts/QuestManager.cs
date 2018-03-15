@@ -15,6 +15,8 @@ public class QuestManager : MonoBehaviour
 
     public Transform Holder;
 
+    public IntObject RewardNum;
+
     private List<Quest> openQuests;
     private List<Quest> closedQuests;
     private Dictionary<int, QuestHUD> questHUDs;
@@ -122,6 +124,8 @@ public class QuestManager : MonoBehaviour
         {
             OnQuestClosed(quest);
         }
+
+        RewardNum.Value += quest.Reward;
     }
 
     public bool HasCapacity()

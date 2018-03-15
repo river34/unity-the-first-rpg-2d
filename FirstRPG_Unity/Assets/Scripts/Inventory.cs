@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using System.Linq;
 
 public class Inventory : MonoBehaviour {
 
@@ -9,14 +10,17 @@ public class Inventory : MonoBehaviour {
 
     public event Action<Item> OnItemAdded;
 
+    public event Action<Item, int> OnItemRemoved;
+
     public ItemHUD ItemHUDPrefab;
 
     public Transform Holder;
 
     public int MaxNumItemTypes = 6;
 
-    private Dictionary<string, int> items;
+    private SortedDictionary<string, int> items;
     private Dictionary<string, ItemHUD> itemHUDs;
+    private Dictionary<string, Item> itemPrefabs;
     private int numItemTypes;
 
     private void Start()
@@ -24,8 +28,9 @@ public class Inventory : MonoBehaviour {
         if (Instance == null)
         {
             Instance = this;
-            items = new Dictionary<string, int>();
+            items = new SortedDictionary<string, int>();
             itemHUDs = new Dictionary<string, ItemHUD>();
+            itemPrefabs = new Dictionary<string, Item>();
         }
         else
         {
@@ -67,12 +72,37 @@ public class Inventory : MonoBehaviour {
             itemHUDs[item.Name].SetNum(items[item.Name]);
         }
 
+        if (itemPrefabs.ContainsKey(item.Name) == false)
+        {
+            itemPrefabs.Add(item.Name, item);
+        }
+
         if (OnItemAdded != null)
         {
             OnItemAdded(item);
         }
 
         return true;
+    }
+
+    public void RemoveLastItem()
+    {
+        if (items.Count > 0)
+        {
+            var last = items.Keys.Last();
+
+            if (itemPrefabs.ContainsKey(last))
+            {
+                if (OnItemRemoved != null)
+                {
+                    OnItemRemoved(itemPrefabs[last], items[last]);
+                }
+            }
+
+            Debug.Log("Discarded " + last + " x " + items[last]);
+
+            Deduct(last, items[last]);
+        }
     }
 
     public bool HasItem(Item item, int num)
@@ -86,29 +116,34 @@ public class Inventory : MonoBehaviour {
         }
         return false;
     }
-   
-    public void Deduct(Item item, int num)
+
+    public void Deduct(string name, int num)
     {
-        if (items.ContainsKey(item.Name))
+        if (items.ContainsKey(name))
         {
-            if (items[item.Name] > num)
+            if (items[name] > num)
             {
-                items[item.Name] -= num;
-                if (itemHUDs.ContainsKey(item.Name))
+                items[name] -= num;
+                if (itemHUDs.ContainsKey(name))
                 {
-                    itemHUDs[item.Name].SetNum(items[item.Name]);
+                    itemHUDs[name].SetNum(items[name]);
                 }
             }
             else
             {
                 numItemTypes--;
-                items.Remove(item.Name);
-                if (itemHUDs.ContainsKey(item.Name))
+                items.Remove(name);
+                if (itemHUDs.ContainsKey(name))
                 {
-                    Destroy(itemHUDs[item.Name].gameObject);
-                    itemHUDs.Remove(item.Name);
+                    Destroy(itemHUDs[name].gameObject);
+                    itemHUDs.Remove(name);
                 }
             }
         }
+    }
+   
+    public void Deduct(Item item, int num)
+    {
+        Deduct(item.Name, num);
     }
 }

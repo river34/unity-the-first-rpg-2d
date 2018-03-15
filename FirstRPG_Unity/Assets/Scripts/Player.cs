@@ -125,5 +125,10 @@ public class Player : Character
                 PlayerSpeed.Value = 0;
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.Backspace))
+        {
+            Inventory.Instance.RemoveLastItem();
+        }
     }
 }
