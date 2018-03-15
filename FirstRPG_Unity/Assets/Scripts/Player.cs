@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Player : Character
 {
@@ -10,7 +11,12 @@ public class Player : Character
 
     public FloatObject PlayerSpeed;
 
+    public event Action Jump;
+
     private Level.LevelControl control;
+
+    private float joystickIgnore = 0.1f;
+    private bool moveLeft, moveRight, moveForward, moveBack, eventJump = false;
 
     protected override void Start()
     {
@@ -63,9 +69,63 @@ public class Player : Character
 
     void CheckInput()
     {
+        float forward = Input.GetAxis("Vertical");
+        float side = Input.GetAxis("Horizontal");
+        float jump = Input.GetAxis("Jump");
+
+        if (forward < joystickIgnore && forward > -joystickIgnore)
+        {
+            forward = 0;
+            moveForward = false;
+            moveBack = false;
+        }
+        else if (forward <= -joystickIgnore)
+        {
+            moveForward = false;
+            moveBack = true;
+        }
+        else
+        {
+            moveForward = true;
+            moveBack = false;
+        }
+
+        if (side < joystickIgnore && side > -joystickIgnore)
+        {
+            side = 0;
+            moveLeft = false;
+            moveRight = false;
+        }
+        else if (side <= -joystickIgnore)
+        {
+            moveLeft = true;
+            moveRight = false;
+        }
+        else
+        {
+            moveLeft = false;
+            moveRight = true;
+        }
+
+        if (jump < joystickIgnore && jump > -joystickIgnore)
+        {
+            eventJump = false;
+        }
+        else
+        {
+            if (eventJump == false)
+            {
+                eventJump = true;
+                if (Jump != null)
+                {
+                    Jump();
+                }
+            }
+        }
+
         if (control == Level.LevelControl.TwoDirections)
         {
-            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+            if (moveLeft)
             {
                 Move(MoveDirection.Left);
                 if (canMove == true)
@@ -74,7 +134,7 @@ public class Player : Character
                     PlayerSpeed.Value = -1 * MoveSpeed;
                 }
             }
-            else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+            else if (moveRight)
             {
                 Move(MoveDirection.Right);
                 if (canMove == true)
@@ -91,7 +151,7 @@ public class Player : Character
         }
         else if (control == Level.LevelControl.FourDirections)
         {
-            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+            if (moveLeft)
             {
                 Move(MoveDirection.Left);
                 if (canMove == true)
@@ -100,7 +160,7 @@ public class Player : Character
                     PlayerSpeed.Value = -1 * MoveSpeed;
                 }
             }
-            else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+            else if (moveRight)
             {
                 Move(MoveDirection.Right);
                 if (canMove == true)
@@ -109,12 +169,12 @@ public class Player : Character
                     PlayerSpeed.Value = MoveSpeed;
                 }
             }
-            else if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+            else if (moveForward)
             {
                 Move(MoveDirection.Up);
                 PlayerMoving.Value = true;
             }
-            else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+            else if (moveBack)
             {
                 Move(MoveDirection.Down);
                 PlayerMoving.Value = true;

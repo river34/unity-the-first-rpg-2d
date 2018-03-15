@@ -4,7 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
 public class Item : MonoBehaviour
-{    
+{
     public string Name;
 
     [System.NonSerialized]
@@ -12,7 +12,7 @@ public class Item : MonoBehaviour
 
     private static int count;
     private bool inRangeOfPlayer;
-    private Character player;
+    private Player player;
     private int id;
 
     private void Awake()
@@ -34,26 +34,18 @@ public class Item : MonoBehaviour
         Image = GetComponent<SpriteRenderer>().sprite;
     }
 
-    private void Update()
-    {
-        if (inRangeOfPlayer == true && player != null)
-        {
-            if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.KeypadEnter))
-            {
-                if (Inventory.Instance.AddItem(this) == true)
-                {
-                    gameObject.SetActive(false);
-                }
-            }
-        }
-    }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
             inRangeOfPlayer = true;
-            player = other.GetComponent<Character>();
+            player = other.GetComponent<Player>();
+
+            if (player != null)
+            {
+                player.Jump -= OnJumpHandler;
+                player.Jump += OnJumpHandler;
+            }
         }
     }
 
@@ -69,5 +61,16 @@ public class Item : MonoBehaviour
     public void Reset()
     {
         gameObject.SetActive(true);
+    }
+
+    private void OnJumpHandler()
+    {
+        if (inRangeOfPlayer == true && player != null)
+        {
+            if (Inventory.Instance.AddItem(this) == true)
+            {
+                gameObject.SetActive(false);
+            }
+        }
     }
 }

@@ -38,17 +38,6 @@ public class DialogueManager : MonoBehaviour
         DontDestroyOnLoad(this);
     }
 
-    private void Update()
-    {
-        if (InDialogue.Value == true)
-        {
-            if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.KeypadEnter))
-            {
-                DisplayNextSentence();
-            }
-        }
-    }
-
     public void AddDialogue(Dialogue dialogue)
     {
         dialogueBuffer.Enqueue(dialogue);
@@ -58,6 +47,9 @@ public class DialogueManager : MonoBehaviour
 
     private void StartDialogue()
     {
+        Player.Instance.Jump -= OnJumpHandler;
+        Player.Instance.Jump += OnJumpHandler;
+
         if (currentDialogue == null)
         {
             currentDialogue = dialogueBuffer.Dequeue();
@@ -125,6 +117,14 @@ public class DialogueManager : MonoBehaviour
         if (dialogueBuffer.Count > 0)
         {
             StartDialogue();
+        }
+    }
+
+    void OnJumpHandler()
+    {
+        if (InDialogue.Value == true)
+        {
+            DisplayNextSentence();
         }
     }
 }

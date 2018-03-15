@@ -1,0 +1,56 @@
+2018-03-10 Game Development Workshop Curriculum
+
+- Group discussion: What’s your favourite games? What kind of game is it (ask students to describe it)?
+- Demo of the RPG
+- Lecture: How to make a game?
+    - Game genres: RPG, strategy, FPS, mobile…
+    - Roles: programmers, artists, designers, writers, …
+        - What I did for the demo—but I didn’t do it alone
+    - Game engines
+- How does computer think? (too much?)
+    - Lecture: As a game developer, we are creating a piece running on computer for human players. Our games are a bridge btw two worlds. We need to understand both sides.
+    - Group discussion: What’s human good at? What’s computer good at?
+    - Lecture: Computer can only understand “literal” command
+    - Group exercise: if you are a computer, …
+
+- Download and import package
+- Dialogue
+    - What is a dialogue in RPG game?
+    - Demo and explain what’s happening under the hood (switch btw demo and code?)
+        - Collision
+        - Trigger enter event
+        - “RPG Event Trigger” is activated
+        - First dialogue in the sequence is populated
+        - Display the text
+    - Lecture: How to add a new dialogue. Options to play with
+    - Demo: Show the results
+    - Task: Modify a conversation between player and an NPC
+    - Task: Create a new interesting conversation
+- Quest
+    - What is a quest in RPG game?
+        - Goal, Initial state, Interaction, …
+    - Demo and explain
+        - Collision
+        - Trigger enter event
+        - “RPG Event Trigger” is activated
+        - First quest in the sequence is populated
+        - Display the text
+        - Add quest to a queue
+    - Lecture: How to add a new quest. Options to play with
+        - Two types of quests: Talk to an NPC, Collect some items
+        - Reward
+    - Task: Modify a quest
+    - Task: Create two quests
+- Level ? Location
+    - What is a level?
+    - Demo and explain
+    - Task: modify a level…?
+
+- Art - sprites
+    - What is a sprite. What does it do?
+    - How to change a sprite
+    - Task: Find a picture on the internet. Change the main character
+- Task: create your own RPG game!
+
+- To do:
+    - near stuff move faster

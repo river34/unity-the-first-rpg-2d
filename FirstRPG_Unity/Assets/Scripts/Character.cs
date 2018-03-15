@@ -29,7 +29,7 @@ public class Character : MonoBehaviour
     private RPGEventTrigger EventTrigger;
     private static int count;
     private bool inRangeOfPlayer;
-    private Character player;
+    private Player player;
     private int id;
     private bool usePhysics;
     private int layerMask;
@@ -104,41 +104,6 @@ public class Character : MonoBehaviour
     protected virtual void Update()
     {
         isWalking = false;
-
-        if (inRangeOfPlayer == true && player != null)
-        {
-            if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.KeypadEnter))
-            {
-                if (EventTrigger != null && EventTrigger.IsTriggered() == false)
-                {
-                    EventTrigger.SetTriggered(true);
-                    
-                    if (EventTrigger.HasDialogue())
-                    {
-                        SetCanMove(false);
-                        if (player != null)
-                        {
-                            player.SetCanMove(false);
-                        }
-                    }
-                    
-                    bool result = EventTrigger.TriggerRPGEvent();
-                    if (result == false)
-                    {
-                        DebugLog.Print(DebugLog.LogType.Warning, "cannot triiger event");
-                        EventTrigger.SetTriggered(false);
-                    }
-                }
-
-                if (EventTrigger != null && EventTrigger.IsTriggered() == true)
-                {
-                    if (EventTrigger.HasOpenQuest() == true)
-                    {
-                        EventTrigger.TryCloseQuest();
-                    }
-                }
-            }
-        }
     }
 
     protected virtual void LateUpdate()
@@ -209,7 +174,13 @@ public class Character : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             inRangeOfPlayer = true;
-            player = other.GetComponent<Character>();
+            player = other.GetComponent<Player>();
+
+            if (player != null)
+            {
+                player.Jump -= OnJumpHandler;
+                player.Jump += OnJumpHandler;
+            }
         }
     }
 
@@ -331,5 +302,40 @@ public class Character : MonoBehaviour
     public void SetPhysics(bool usePhysics)
     {
         this.usePhysics = usePhysics;
+    }
+
+    private void OnJumpHandler()
+    {
+        if (inRangeOfPlayer == true && player != null)
+        {
+            if (EventTrigger != null && EventTrigger.IsTriggered() == false)
+            {
+                EventTrigger.SetTriggered(true);
+
+                if (EventTrigger.HasDialogue())
+                {
+                    SetCanMove(false);
+                    if (player != null)
+                    {
+                        player.SetCanMove(false);
+                    }
+                }
+
+                bool result = EventTrigger.TriggerRPGEvent();
+                if (result == false)
+                {
+                    DebugLog.Print(DebugLog.LogType.Warning, "cannot triiger event");
+                    EventTrigger.SetTriggered(false);
+                }
+            }
+
+            if (EventTrigger != null && EventTrigger.IsTriggered() == true)
+            {
+                if (EventTrigger.HasOpenQuest() == true)
+                {
+                    EventTrigger.TryCloseQuest();
+                }
+            }
+        }
     }
 }
