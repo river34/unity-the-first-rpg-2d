@@ -11,12 +11,14 @@ public class Player : Character
 
     public FloatObject PlayerSpeed;
 
-    public event Action Jump;
+    public AudioClip ClickSound;
+
+    public event Action Jump, Cancel;
 
     private Level.LevelControl control;
 
     private float joystickIgnore = 0.1f;
-    private bool moveLeft, moveRight, moveForward, moveBack, eventJump = false;
+    private bool moveLeft, moveRight, moveForward, moveBack, eventJump, eventCancel = false;
 
     protected override void Start()
     {
@@ -34,6 +36,8 @@ public class Player : Character
         base.Start();
         PlayerSpeed.Value = MoveSpeed;
         PlayerMoving.Value = true;
+
+        Cancel += OnPlayerCancelHandler;
     }
 
     protected override void Update()
@@ -72,6 +76,7 @@ public class Player : Character
         float forward = Input.GetAxis("Vertical");
         float side = Input.GetAxis("Horizontal");
         float jump = Input.GetAxis("Jump");
+        float cancel = Input.GetAxis("Cancel");
 
         if (forward < joystickIgnore && forward > -joystickIgnore)
         {
@@ -120,6 +125,24 @@ public class Player : Character
                 {
                     Jump();
                 }
+                SoundManager.Instance.PlaySFX(ClickSound);
+            }
+        }
+
+        if (cancel < joystickIgnore && cancel > -joystickIgnore)
+        {
+            eventCancel = false;
+        }
+        else
+        {
+            if (eventCancel == false)
+            {
+                eventCancel = true;
+                if (Cancel != null)
+                {
+                    Cancel();
+                }
+                SoundManager.Instance.PlaySFX(ClickSound);
             }
         }
 
@@ -185,10 +208,10 @@ public class Player : Character
                 PlayerSpeed.Value = 0;
             }
         }
+    }
 
-        if (Input.GetKeyDown(KeyCode.Backspace))
-        {
-            Inventory.Instance.RemoveLastItem();
-        }
+    private void OnPlayerCancelHandler()
+    {
+        Inventory.Instance.RemoveLastItem();
     }
 }

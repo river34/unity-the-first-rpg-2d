@@ -525,7 +525,8 @@ GameObject:
   - component: {fileID: 114995691765744584}
   - component: {fileID: 114030297252887112}
   - component: {fileID: 114989952111653410}
-  - component: {fileID: 114219610334624518}
+  - component: {fileID: 114702280708775798}
+  - component: {fileID: 114086234762945334}
   m_Layer: 0
   m_Name: Victo
   m_TagString: Untagged
@@ -719,6 +720,24 @@ GameObject:
   - component: {fileID: 212804176300896762}
   m_Layer: 0
   m_Name: Wagon (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1706079488153172
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4468272369417770}
+  - component: {fileID: 212475093483135798}
+  - component: {fileID: 61941927413386824}
+  - component: {fileID: 114316173642505462}
+  m_Layer: 0
+  m_Name: Beer (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1021,6 +1040,7 @@ Transform:
   - {fileID: 4856600574794298}
   - {fileID: 4777040155894898}
   - {fileID: 4661511022362188}
+  - {fileID: 4468272369417770}
   m_Father: {fileID: 4996050402637962}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1310,7 +1330,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1568254635243988}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.791, z: 0}
+  m_LocalPosition: {x: 0, y: -0.75, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 4763986591320314}
@@ -1330,6 +1350,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4350720125953756}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4468272369417770
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1706079488153172}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.86, y: -1.37, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4120586955295700}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4482856934757434
 Transform:
@@ -1957,6 +1990,31 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
+--- !u!61 &61941927413386824
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1706079488153172}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.32, y: 0.32}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!61 &61971494194005238
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -2226,6 +2284,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Apple
+--- !u!114 &114086234762945334
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1546966400110716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9537401e4f7690a4180f6254bdd20798, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FromPlayer: 0
+  Sentences:
+  - Thanks dear.
 --- !u!114 &114093152013114450
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2273,22 +2345,6 @@ MonoBehaviour:
   InDialogue: {fileID: 11400000, guid: 3a591d26d4cf5cb47801bc56628cfccc, type: 2}
   IdleClip: {fileID: 7400000, guid: abd14544611d3814688592de2e345a15, type: 2}
   WalkingClip: {fileID: 7400000, guid: abd14544611d3814688592de2e345a15, type: 2}
---- !u!114 &114219610334624518
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1546966400110716}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24f6bd9dc24e3564c848fdac7a3ad859, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Type: 0
-  ToCharacter: {fileID: 0}
-  Item: {fileID: 114130354290239986}
-  Num: 1
-  Reward: 1
 --- !u!114 &114243689042092138
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2318,7 +2374,7 @@ MonoBehaviour:
   CameraWidth: 14
   PlayerMoving: {fileID: 11400000, guid: c84eb88b4fb70f948b5d3faea12b2518, type: 2}
   PlayerSpeed: {fileID: 11400000, guid: cb5728e0c069aa2498a376575ad0feb5, type: 2}
-  SpeedDevider: 8
+  SpeedDevider: 4
 --- !u!114 &114248994938200880
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2332,6 +2388,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentLevel: {fileID: 114650082233977306}
   NextLeve: {fileID: 0}
+--- !u!114 &114316173642505462
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1706079488153172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9318f566f9e6e064e9d74de476b4c010, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Beer
 --- !u!114 &114468490805242210
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2375,7 +2443,7 @@ MonoBehaviour:
   CameraWidth: 14
   PlayerMoving: {fileID: 11400000, guid: c84eb88b4fb70f948b5d3faea12b2518, type: 2}
   PlayerSpeed: {fileID: 11400000, guid: cb5728e0c069aa2498a376575ad0feb5, type: 2}
-  SpeedDevider: 32
+  SpeedDevider: 8
 --- !u!114 &114535666498916482
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2476,6 +2544,22 @@ MonoBehaviour:
   InDialogue: {fileID: 11400000, guid: 3a591d26d4cf5cb47801bc56628cfccc, type: 2}
   IdleClip: {fileID: 7400000, guid: 676abc8d78d56894c81840b777d1c1d5, type: 2}
   WalkingClip: {fileID: 0}
+--- !u!114 &114702280708775798
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1546966400110716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24f6bd9dc24e3564c848fdac7a3ad859, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 0
+  ToCharacter: {fileID: 0}
+  Item: {fileID: 114130354290239986}
+  Num: 2
+  Reward: 1
 --- !u!114 &114730336489859942
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2555,7 +2639,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FromPlayer: 0
   Sentences:
-  - Beer, beer, beer
+  - I am Victo.
+  - I want beer.
 --- !u!114 &114995691765744584
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2567,7 +2652,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4e1882c4f59a554c926d8b04c80ea4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Victor
+  Name: Victo
   MoveSpeed: 1
   DialogueBark: {fileID: 1651847672762340}
   QuestBark: {fileID: 1546237459825258}
@@ -3488,7 +3573,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f21eb42a428bfe3428f3404d65076de8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fbb46eb2ca519b1429ce59f99a03b946, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3788,6 +3873,48 @@ SpriteRenderer:
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1.0138888, y: 0.9444444}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+--- !u!212 &212475093483135798
+SpriteRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1706079488153172}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300106, guid: 9eb883820ba385a47810f2a89fe57188, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

@@ -1,4 +1,4 @@
-2018-03-10 Game Development Workshop Curriculum
+﻿2018-03-10 Game Development Workshop Curriculum
 
 - Group discussion: What’s your favourite games? What kind of game is it (ask students to describe it)?
 - Demo of the RPG
@@ -51,6 +51,3 @@
     - How to change a sprite
     - Task: Find a picture on the internet. Change the main character
 - Task: create your own RPG game!
-
-- To do:
-    - near stuff move faster

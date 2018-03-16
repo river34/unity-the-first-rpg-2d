@@ -29,7 +29,7 @@ public class EnvironmentCard : MonoBehaviour
     {
         if (PlayerMoving.Value == true)
         {
-            transform.position += Vector3.left * PlayerSpeed.Value * Time.deltaTime / SpeedDevider;
+            transform.position -= Vector3.left * PlayerSpeed.Value * Time.deltaTime / SpeedDevider;
         }
 
         if (player == null)

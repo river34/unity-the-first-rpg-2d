@@ -14,4 +14,7 @@ Art:
 - Rogue - https://lionheart963.itch.io/rogue-like-character
 - Bandit - https://lionheart963.itch.io/axe-bandit
 - Blob Minion - https://lionheart963.itch.io/blob-minion
-- blob sprite - https://lionheart963.itch.io/blob-sprite
+- Blob Sprite - https://lionheart963.itch.io/blob-sprite
+
+Sound
+- Click - http://soundbible.com/783-Click.html

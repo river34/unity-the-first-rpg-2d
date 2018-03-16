@@ -121,10 +121,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb2939d1bffecce43a547c90de1e6c5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InFadingIn: {fileID: 11400000, guid: 3f4859e1da465e34082bac9adeb711b5, type: 2}
-  InFadingOut: {fileID: 11400000, guid: 4b633a4edfa01d94da9650478402c092, type: 2}
-  FadingTime: {fileID: 11400000, guid: 9e32751bbb5db1548bc787b9639f86e1, type: 2}
+  InLoading: {fileID: 11400000, guid: 3f4859e1da465e34082bac9adeb711b5, type: 2}
+  LoadingTime: {fileID: 11400000, guid: 9e32751bbb5db1548bc787b9639f86e1, type: 2}
   Background: {fileID: 114165965086034910}
+  loadingTime: 2
 --- !u!222 &222814996819844824
 CanvasRenderer:
   m_ObjectHideFlags: 1

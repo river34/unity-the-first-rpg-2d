@@ -143,6 +143,7 @@ MonoBehaviour:
   WalkingClip: {fileID: 7400000, guid: 3ac44ebf6e13eb541a1226efb9c07f6b, type: 2}
   PlayerMoving: {fileID: 11400000, guid: c84eb88b4fb70f948b5d3faea12b2518, type: 2}
   PlayerSpeed: {fileID: 11400000, guid: cb5728e0c069aa2498a376575ad0feb5, type: 2}
+  ClickSound: {fileID: 8300000, guid: 67b552c349010f1418a46baad98e9554, type: 3}
 --- !u!114 &114764206262020764
 MonoBehaviour:
   m_ObjectHideFlags: 1
