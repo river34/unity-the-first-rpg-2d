@@ -31,6 +31,7 @@ public class CameraFollow : MonoBehaviour
         if (cameraFollowMode == Level.LevelCameraFollow.Scrolling)
         {
             position.x = player.position.x;
+            position.y = 0;
             transform.position = position;
         }
         else if (cameraFollowMode == Level.LevelCameraFollow.Following)

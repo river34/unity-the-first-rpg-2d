@@ -103,6 +103,8 @@ public class RPGEventTrigger : MonoBehaviour
             {
                 if (incomingDialogue == dialogue)
                 {
+                    Debug.Log(gameObject.name + " dialogue completed");
+                    Debug.Log(gameObject.name + " dialogue = " + dialogue.Sentences.Length);
                     if (OnRPGEventClosed != null)
                     {
                         OnRPGEventClosed(dialogue);

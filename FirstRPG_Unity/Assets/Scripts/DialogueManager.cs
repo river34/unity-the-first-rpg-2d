@@ -40,6 +40,7 @@ public class DialogueManager : MonoBehaviour
 
     public void AddDialogue(Dialogue dialogue)
     {
+        Debug.Log("AddDialogue");
         dialogueBuffer.Enqueue(dialogue);
 
         StartDialogue();
@@ -47,6 +48,7 @@ public class DialogueManager : MonoBehaviour
 
     private void StartDialogue()
     {
+        Debug.Log("StartDialogue");
         Player.Instance.Jump -= OnJumpHandler;
         Player.Instance.Jump += OnJumpHandler;
 
@@ -112,16 +114,20 @@ public class DialogueManager : MonoBehaviour
             OnDialogueCompleted(currentDialogue);
         }
 
+        Debug.Log("EndDialogue");
         currentDialogue = null;
 
         if (dialogueBuffer.Count > 0)
         {
             StartDialogue();
         }
+
+        Player.Instance.Jump -= OnJumpHandler;
     }
 
     void OnJumpHandler()
     {
+        Debug.Log("OnJumpHandler");
         if (InDialogue.Value == true)
         {
             DisplayNextSentence();
