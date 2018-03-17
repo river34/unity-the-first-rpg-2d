@@ -20,6 +20,8 @@ public class Level : MonoBehaviour
 
     public bool UsePhysics;
 
+    private EnvironmentCard[] envs;
+
     public void StartLevel()
     {
         //gameObject.SetActive(true);
@@ -41,6 +43,15 @@ public class Level : MonoBehaviour
 
         gameObject.SetActive(true);
 
+        envs = GetComponentsInChildren<EnvironmentCard>(true);
+        if (envs.Length > 0)
+        {
+            foreach (EnvironmentCard env in envs)
+            {
+                env.gameObject.SetActive(false);
+            }
+        }
+
         StartCoroutine(WaitAndStart(LoadingTime.Value / 2));
     }
 
@@ -57,6 +68,15 @@ public class Level : MonoBehaviour
         yield return new WaitForSeconds(delay);
 
         gameObject.SetActive(true);
+
+		envs = GetComponentsInChildren<EnvironmentCard>(true);
+		if (envs.Length > 0)
+		{
+			foreach (EnvironmentCard env in envs)
+			{
+				env.gameObject.SetActive(true);
+			}
+		}
 
         Player.Instance.transform.position = StartPosition.position;
         Player.Instance.SetControl(ControlMode);
