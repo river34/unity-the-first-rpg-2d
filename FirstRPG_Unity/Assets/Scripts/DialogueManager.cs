@@ -49,8 +49,8 @@ public class DialogueManager : MonoBehaviour
     private void StartDialogue()
     {
         Debug.Log("StartDialogue");
-        Player.Instance.Jump -= OnJumpHandler;
-        Player.Instance.Jump += OnJumpHandler;
+        Player.Instance.Pickup -= OnPickupHandler;
+        Player.Instance.Pickup += OnPickupHandler;
 
         if (currentDialogue == null)
         {
@@ -122,12 +122,12 @@ public class DialogueManager : MonoBehaviour
             StartDialogue();
         }
 
-        Player.Instance.Jump -= OnJumpHandler;
+        Player.Instance.Pickup -= OnPickupHandler;
     }
 
-    void OnJumpHandler()
+    void OnPickupHandler()
     {
-        Debug.Log("OnJumpHandler");
+        Debug.Log("OnPickupHandler");
         if (InDialogue.Value == true)
         {
             DisplayNextSentence();

@@ -7,14 +7,15 @@ public class SoundManager : MonoBehaviour
 {
     public static SoundManager Instance;
 
-    private AudioSource audioSource;
+    public AudioSource Soundfx;
+
+    public AudioSource Background;
 
     private void Start()
     {
         if (Instance == null)
         {
             Instance = this;
-            audioSource = GetComponent<AudioSource>();
         }
         else
         {
@@ -26,8 +27,8 @@ public class SoundManager : MonoBehaviour
 
     public void PlaySFX(AudioClip clip)
     {
-        audioSource.clip = clip;
-        audioSource.loop = false;
-        audioSource.Play();
+        Soundfx.clip = clip;
+        Soundfx.loop = false;
+        Soundfx.Play();
     }
 }

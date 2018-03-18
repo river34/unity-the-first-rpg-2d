@@ -40,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1131164714923128}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3, y: -0.724, z: -1}
+  m_LocalPosition: {x: -3, y: -0.724, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -141,6 +141,7 @@ MonoBehaviour:
   InDialogue: {fileID: 11400000, guid: 3a591d26d4cf5cb47801bc56628cfccc, type: 2}
   IdleClip: {fileID: 7400000, guid: b79fba71597c1ff4dacc98f5a7d093da, type: 2}
   WalkingClip: {fileID: 7400000, guid: 3ac44ebf6e13eb541a1226efb9c07f6b, type: 2}
+  JumpingClip: {fileID: 0}
   PlayerMoving: {fileID: 11400000, guid: c84eb88b4fb70f948b5d3faea12b2518, type: 2}
   PlayerSpeed: {fileID: 11400000, guid: cb5728e0c069aa2498a376575ad0feb5, type: 2}
   ClickSound: {fileID: 8300000, guid: 67b552c349010f1418a46baad98e9554, type: 3}
@@ -150,7 +151,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1131164714923128}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c01e7fa07d53b44e913f8fd21fc433d, type: 3}
   m_Name: 

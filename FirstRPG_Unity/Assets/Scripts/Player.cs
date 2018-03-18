@@ -13,12 +13,14 @@ public class Player : Character
 
     public AudioClip ClickSound;
 
-    public event Action Jump, Cancel;
+	public event Action Pickup, Cancel;
 
     private Level.LevelControl control;
 
     private float joystickIgnore = 0.1f;
-    private bool moveLeft, moveRight, moveForward, moveBack, eventJump, eventCancel = false;
+	private bool moveLeft, moveRight, moveForward, moveBack, eventPickup, eventCancel = false;
+	private bool moveJump, eventJump;
+	Coroutine jumpingCoroutine;
 
     protected override void Start()
     {
@@ -75,8 +77,9 @@ public class Player : Character
     {
         float forward = Input.GetAxis("Vertical");
         float side = Input.GetAxis("Horizontal");
-        float jump = Input.GetAxis("Jump");
+		float pickup = Input.GetAxis("Submit");
         float cancel = Input.GetAxis("Cancel");
+		float jump = Input.GetAxis ("Jump");
 
         if (forward < joystickIgnore && forward > -joystickIgnore)
         {
@@ -112,22 +115,37 @@ public class Player : Character
             moveRight = true;
         }
 
-        if (jump < joystickIgnore && jump > -joystickIgnore)
+		if (pickup < joystickIgnore && pickup > -joystickIgnore)
         {
-            eventJump = false;
+            eventPickup = false;
         }
         else
-        {
-            if (eventJump == false)
+		{
+            if (eventPickup == false)
             {
-                eventJump = true;
-                if (Jump != null)
+                eventPickup = true;
+                if (Pickup != null)
                 {
-                    Jump();
+                    Pickup();
                 }
                 SoundManager.Instance.PlaySFX(ClickSound);
             }
         }
+
+		if (jump < joystickIgnore && jump > -joystickIgnore)
+		{
+			eventJump = false;
+		}
+		else
+		{
+			if (eventJump == false)
+			{
+				eventJump = true;
+				if (jumpingCoroutine == null) {
+					jumpingCoroutine = StartCoroutine (Jumping ());
+				}
+			}
+		}
 
         if (cancel < joystickIgnore && cancel > -joystickIgnore)
         {
@@ -174,34 +192,27 @@ public class Player : Character
         }
         else if (control == Level.LevelControl.FourDirections)
         {
-            if (moveLeft)
-            {
-                Move(MoveDirection.Left);
-                if (canMove == true)
-                {
-                    PlayerMoving.Value = true;
-                    PlayerSpeed.Value = -1 * MoveSpeed;
-                }
-            }
-            else if (moveRight)
-            {
-                Move(MoveDirection.Right);
-                if (canMove == true)
-                {
-                    PlayerMoving.Value = true;
-                    PlayerSpeed.Value = MoveSpeed;
-                }
-            }
-            else if (moveForward)
-            {
-                Move(MoveDirection.Up);
-                PlayerMoving.Value = true;
-            }
-            else if (moveBack)
-            {
-                Move(MoveDirection.Down);
-                PlayerMoving.Value = true;
-            }
+			if (moveLeft) {
+				Move (MoveDirection.Left);
+				if (canMove == true) {
+					PlayerMoving.Value = true;
+					PlayerSpeed.Value = -1 * MoveSpeed;
+				}
+			} else if (moveRight) {
+				Move (MoveDirection.Right);
+				if (canMove == true) {
+					PlayerMoving.Value = true;
+					PlayerSpeed.Value = MoveSpeed;
+				}
+			} else if (moveForward) {
+				Move (MoveDirection.Up);
+				PlayerMoving.Value = true;
+			} else if (moveBack) {
+				Move (MoveDirection.Down);
+				PlayerMoving.Value = true;
+			} else if (eventPickup) {
+				
+			}
             else
             {
                 PlayerMoving.Value = false;
@@ -214,4 +225,22 @@ public class Player : Character
     {
         Inventory.Instance.RemoveLastItem();
     }
+
+	IEnumerator Jumping()
+	{
+		float startTime = Time.time;
+		float y = transform.position.y;
+		isJumping = true;
+		while (Time.time - startTime <= 0.25f) {
+			transform.position += Vector3.up * 5 * Time.deltaTime;
+			yield return new WaitForEndOfFrame ();
+		}
+		while (Time.time - startTime <= 0.5f) {
+			transform.position -= Vector3.up * 5 * Time.deltaTime;
+			yield return new WaitForEndOfFrame ();
+		}
+		transform.position = new Vector3 (transform.position.x, y, transform.position.z);
+		isJumping = false;
+		jumpingCoroutine = null;
+	}
 }

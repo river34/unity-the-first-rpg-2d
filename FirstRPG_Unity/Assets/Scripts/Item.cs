@@ -43,8 +43,8 @@ public class Item : MonoBehaviour
 
             if (player != null)
             {
-                player.Jump -= OnJumpHandler;
-                player.Jump += OnJumpHandler;
+                player.Pickup -= OnPickupHandler;
+                player.Pickup += OnPickupHandler;
             }
         }
     }
@@ -63,7 +63,7 @@ public class Item : MonoBehaviour
         gameObject.SetActive(true);
     }
 
-    private void OnJumpHandler()
+    private void OnPickupHandler()
     {
         if (inRangeOfPlayer == true && player != null)
         {

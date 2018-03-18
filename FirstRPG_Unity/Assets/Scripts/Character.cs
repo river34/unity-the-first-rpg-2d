@@ -19,11 +19,13 @@ public class Character : MonoBehaviour
 
     public AnimationClip WalkingClip;
 
+	public AnimationClip JumpingClip;
+
     protected Animator anim;
     protected enum MoveDirection { Up, Down, Left, Right };
     protected bool canMove;
 
-    private bool isWalking, isWalkingLast;
+	protected bool isWalking, isWalkingLast, isJumping, isJumpingLast;
     private bool isLeft, isLeftLast;
     private Vector3 localScale;
     private RPGEventTrigger EventTrigger;
@@ -88,6 +90,9 @@ public class Character : MonoBehaviour
             {
                 myNewOverrideController["KnightWalking"] = WalkingClip;
             }
+			if (JumpingClip != null) {
+				myNewOverrideController ["KnightJumping"] = JumpingClip;
+			}
             myNewOverrideController.runtimeAnimatorController = anim.runtimeAnimatorController;
             anim.runtimeAnimatorController = myNewOverrideController;
         }
@@ -98,7 +103,7 @@ public class Character : MonoBehaviour
 
         InDialogue.OnUpdated += OnInDialogueUpdated;
 
-        layerMask = 1 << (LayerMask.NameToLayer("Map"));
+		layerMask = 1 << (LayerMask.NameToLayer("Map")) | 1 << (LayerMask.NameToLayer("Obstacle"));
     }
 
     protected virtual void Update()
@@ -112,7 +117,14 @@ public class Character : MonoBehaviour
         {
             anim.SetBool("IsWalking", isWalking);
         }
+		if (isJumping != isJumpingLast) {
+            if (isJumping)
+			{
+				anim.SetTrigger("IsJumping");
+            }
+		}
         isWalkingLast = isWalking;
+		isJumpingLast = isJumping;
 
         if (isLeft != isLeftLast)
         {
@@ -148,24 +160,16 @@ public class Character : MonoBehaviour
 
         if (Vector3.Distance(nextPosition, transform.position) > float.Epsilon)
         {
-            if (usePhysics == true)
-            {
-                if (Physics2D.Raycast(transform.position, nextPosition - transform.position, MoveSpeed * Time.deltaTime, layerMask))
-                {
-                    // do nothing
-                    isWalking = false;
-                }
-                else
-                {
-                    isWalking = true;
-                    transform.position = nextPosition;
-                }
-            }
-            else
-            {
-                isWalking = true;
-                transform.position = nextPosition;
-            }
+			if (Physics2D.Raycast(transform.position, nextPosition - transform.position, MoveSpeed * Time.deltaTime, layerMask))
+			{
+				// do nothing
+				isWalking = false;
+			}
+			else
+			{
+				isWalking = true;
+				transform.position = nextPosition;
+			}
         }
     }
 
@@ -178,8 +182,8 @@ public class Character : MonoBehaviour
 
             if (player != null)
             {
-                player.Jump -= OnJumpHandler;
-                player.Jump += OnJumpHandler;
+                player.Pickup -= OnPickupHandler;
+                player.Pickup += OnPickupHandler;
             }
         }
     }
@@ -304,7 +308,7 @@ public class Character : MonoBehaviour
         this.usePhysics = usePhysics;
     }
 
-    private void OnJumpHandler()
+    private void OnPickupHandler()
     {
         if (inRangeOfPlayer == true && player != null)
         {
