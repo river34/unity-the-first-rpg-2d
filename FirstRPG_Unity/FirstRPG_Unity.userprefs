@@ -1,12 +1,13 @@
 ﻿<Properties StartupConfiguration="{A677A1BD-1E90-A31F-FBAD-9734557681C5}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SoundManager.cs">
+  <MonoDevelop.Ide.ItemProperties.FirstRPG__Unity PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Character.cs">
     <Files>
-      <File FileName="Assets/Scripts/Level.cs" Line="79" Column="4" />
-      <File FileName="Assets/Scripts/Player.cs" Line="106" Column="10" />
+      <File FileName="Assets/Scripts/Level.cs" Line="90" Column="32" />
+      <File FileName="Assets/Scripts/Player.cs" Line="153" Column="24" />
       <File FileName="Assets/Scripts/DialogueManager.cs" Line="52" Column="25" />
-      <File FileName="Assets/Scripts/Character.cs" Line="123" Column="34" />
+      <File FileName="Assets/Scripts/Character.cs" Line="26" Column="35" />
       <File FileName="Assets/Scripts/Item.cs" Line="73" Column="14" />
-      <File FileName="Assets/Scripts/SoundManager.cs" Line="10" Column="35" />
+      <File FileName="Assets/Scripts/SoundManager.cs" Line="35" Column="26" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

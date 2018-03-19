@@ -21,6 +21,10 @@ public class Character : MonoBehaviour
 
 	public AnimationClip JumpingClip;
 
+    public float JumpTime = 0.5f;
+
+    public float JumpSpeed = 5.0f;
+
     protected Animator anim;
     protected enum MoveDirection { Up, Down, Left, Right };
     protected bool canMove;
@@ -34,7 +38,8 @@ public class Character : MonoBehaviour
     private Player player;
     private int id;
     private bool usePhysics;
-    private int layerMask;
+	private int layerMask;
+	private Coroutine jumpingCoroutine;
 
     private void Awake()
     {
@@ -341,5 +346,33 @@ public class Character : MonoBehaviour
                 }
             }
         }
+	}
+
+	IEnumerator Jumping()
+	{
+		float startTime = Time.time;
+		float y = transform.position.y;
+		isJumping = true;
+		while (Time.time - startTime <= JumpTime / 2)
+		{
+			transform.position += Vector3.up * JumpSpeed * Time.deltaTime;
+			yield return new WaitForEndOfFrame();
+		}
+		while (Time.time - startTime <= JumpTime)
+		{
+			transform.position -= Vector3.up * JumpSpeed * Time.deltaTime;
+			yield return new WaitForEndOfFrame();
+		}
+		transform.position = new Vector3(transform.position.x, y, transform.position.z);
+		isJumping = false;
+		jumpingCoroutine = null;
+	}
+
+    protected void Jump()
+    {
+        if (jumpingCoroutine == null)
+        {
+			jumpingCoroutine = StartCoroutine(Jumping());
+		}
     }
 }

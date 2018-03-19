@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
@@ -20,7 +20,6 @@ public class Player : Character
     private float joystickIgnore = 0.1f;
 	private bool moveLeft, moveRight, moveForward, moveBack, eventPickup, eventCancel = false;
 	private bool moveJump, eventJump;
-	Coroutine jumpingCoroutine;
 
     protected override void Start()
     {
@@ -51,6 +50,16 @@ public class Player : Character
     public void SetControl(Level.LevelControl control)
     {
         this.control = control;
+    }
+
+    public void SetSort(bool setSort)
+    {
+        ResetSortingOrder resetSort = GetComponent<ResetSortingOrder>();
+        Debug.Log("resetSort = " + resetSort);
+        if (resetSort != null)
+        {
+            resetSort.enabled = setSort;
+        }
     }
 
     //public void SetPhysics(bool usePhysics)
@@ -141,9 +150,7 @@ public class Player : Character
 			if (eventJump == false)
 			{
 				eventJump = true;
-				if (jumpingCoroutine == null) {
-					jumpingCoroutine = StartCoroutine (Jumping ());
-				}
+                Jump();
 			}
 		}
 
@@ -225,22 +232,4 @@ public class Player : Character
     {
         Inventory.Instance.RemoveLastItem();
     }
-
-	IEnumerator Jumping()
-	{
-		float startTime = Time.time;
-		float y = transform.position.y;
-		isJumping = true;
-		while (Time.time - startTime <= 0.25f) {
-			transform.position += Vector3.up * 5 * Time.deltaTime;
-			yield return new WaitForEndOfFrame ();
-		}
-		while (Time.time - startTime <= 0.5f) {
-			transform.position -= Vector3.up * 5 * Time.deltaTime;
-			yield return new WaitForEndOfFrame ();
-		}
-		transform.position = new Vector3 (transform.position.x, y, transform.position.z);
-		isJumping = false;
-		jumpingCoroutine = null;
-	}
 }

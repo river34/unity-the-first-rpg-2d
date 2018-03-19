@@ -31,4 +31,11 @@ public class SoundManager : MonoBehaviour
         Soundfx.loop = false;
         Soundfx.Play();
     }
+
+    public void PlayMusic(AudioClip clip)
+    {
+        Background.clip = clip;
+		Background.loop = true;
+		Background.Play();
+    }
 }

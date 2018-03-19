@@ -10863,6 +10863,7 @@ MonoBehaviour:
   ControlMode: 1
   CameraFollowMode: 1
   UsePhysics: 1
+  BackgroundMusic: {fileID: 8300000, guid: c855773ae6b9a4ad0a55bf51ba2c3618, type: 3}
 --- !u!114 &114398067558782996
 MonoBehaviour:
   m_ObjectHideFlags: 1

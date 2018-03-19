@@ -20,6 +20,10 @@ public class Level : MonoBehaviour
 
     public bool UsePhysics;
 
+    public bool ResetSort;
+
+    public AudioClip BackgroundMusic;
+
     private EnvironmentCard[] envs;
 
     public void StartLevel()
@@ -81,8 +85,16 @@ public class Level : MonoBehaviour
         Player.Instance.transform.position = StartPosition.position;
         Player.Instance.SetControl(ControlMode);
         Player.Instance.SetPhysics(UsePhysics);
+        Player.Instance.SetSort(ResetSort);
+
+        Debug.Log("WaitAndStart");
 
         CameraFollow.Instance.SetCameraFollow(CameraFollowMode);
+
+        if (BackgroundMusic != null)
+        {
+            SoundManager.Instance.PlayMusic(BackgroundMusic);
+        }
 
         Item[] items = GetComponentsInChildren<Item>(true);
         if (items.Length > 0)
